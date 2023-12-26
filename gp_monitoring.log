@@ -1,0 +1,405 @@
+INFO:root:2023-08-12 21:11:55.055676 no long process (10 mn)
+INFO:root:2023-08-12 21:20:35.137313no long process (10 mn)
+INFO:root:2023-08-12 21:21:32.092516 no long process (10 mn)
+INFO:root:2023-08-12 21:25:14.192117 no long process (10 mn)
+INFO:root:2023-08-12 21:26:28.360754 no long process (10 mn)
+INFO:root:2023-08-12 21:26:39.398931 no long process (10 mn)
+INFO:root:2023-08-12 21:27:12.939074 no long process (10 mn)
+INFO:root:2023-08-12 21:27:22.590913 no long process (10 mn)
+INFO:root:2023-08-12 21:27:55.212082 no long process (10 mn)
+INFO:root:2023-08-12 21:35:43.781827 no long process (10 mn)
+INFO:root:2023-08-13 09:51:08.038821 no long process (10 mn)
+INFO:root:2023-08-13 09:52:48.352411('Running process  - ', (13759, 'postgres', 1328996, None, 16386, 'admin', 'DBeaver 23.0.2 - Main <postgres>', '51.159.113.146', None, 24932, datetime.datetime(2023, 8, 13, 6, 51, 10, 496510, tzinfo=datetime.timezone.utc), None, datetime.datetime(2023, 8, 13, 6, 51, 10, 753785, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 13, 6, 51, 10, 753889, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle', None, None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-13 09:53:09.756164('Running process  - ', (13759, 'postgres', 1328996, None, 16386, 'admin', 'DBeaver 23.0.2 - Main <postgres>', '51.159.113.146', None, 24932, datetime.datetime(2023, 8, 13, 6, 51, 10, 496510, tzinfo=datetime.timezone.utc), None, datetime.datetime(2023, 8, 13, 6, 51, 10, 753785, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 13, 6, 51, 10, 753889, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle', None, None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-13 09:53:33.306794('Running process  - ', (13759, 'postgres', 1328996, None, 16386, 'admin', 'DBeaver 23.0.2 - Main <postgres>', '51.159.113.146', None, 24932, datetime.datetime(2023, 8, 13, 6, 51, 10, 496510, tzinfo=datetime.timezone.utc), None, datetime.datetime(2023, 8, 13, 6, 51, 10, 753785, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 13, 6, 51, 10, 753889, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle', None, None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-13 09:53:54.395492('Running process  - ', (13759, 'postgres', 1328996, None, 16386, 'admin', 'DBeaver 23.0.2 - Main <postgres>', '51.159.113.146', None, 24932, datetime.datetime(2023, 8, 13, 6, 51, 10, 496510, tzinfo=datetime.timezone.utc), None, datetime.datetime(2023, 8, 13, 6, 51, 10, 753785, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 13, 6, 51, 10, 753889, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle', None, None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-13 09:57:05.821059
+INFO:root:2023-08-13 09:57:24.379313 no long process (10 mn)
+INFO:root:2023-08-16 14:56:30.549564 no long process (10 mn)
+INFO:root:2023-08-16 14:58:58.555151 no long process (10 mn)
+INFO:root:2023-08-16 14:59:39.767914 no long process (10 mn)
+INFO:root:2023-08-16 14:59:56.118295 no long process (10 mn)
+INFO:root:2023-08-16 15:28:32.233746 no long process (10 mn)
+INFO:root:2023-08-16 20:21:46.495838 no long process (10 mn)
+INFO:root:2023-08-16 20:45:52.801147('Running process  - ', (36704, 'ce-emp-preprod', 1522248, None, 36708, 'ce_emp_preprod_dbo', 'DBeaver 23.0.2 - SQLEditor <Script-2.sql>', '51.159.113.146', None, 49154, datetime.datetime(2023, 8, 16, 18, 35, 41, 108353, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 42, 737332, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650322, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650360, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle in transaction', '14944', None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-16 20:48:10.074837('Running process  - ', (36704, 'ce-emp-preprod', 1522248, None, 36708, 'ce_emp_preprod_dbo', 'DBeaver 23.0.2 - SQLEditor <Script-2.sql>', '51.159.113.146', None, 49154, datetime.datetime(2023, 8, 16, 18, 35, 41, 108353, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 42, 737332, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650322, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650360, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle in transaction', '14944', None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-16 20:52:32.553589('Running process  - ', (36704, 'ce-emp-preprod', 1522248, None, 36708, 'ce_emp_preprod_dbo', 'DBeaver 23.0.2 - SQLEditor <Script-2.sql>', '51.159.113.146', None, 49154, datetime.datetime(2023, 8, 16, 18, 35, 41, 108353, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 42, 737332, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650322, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650360, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle in transaction', '14944', None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-16 20:54:11.721064('Running process  - ', (36704, 'ce-emp-preprod', 1522248, None, 36708, 'ce_emp_preprod_dbo', 'DBeaver 23.0.2 - SQLEditor <Script-2.sql>', '51.159.113.146', None, 49154, datetime.datetime(2023, 8, 16, 18, 35, 41, 108353, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 42, 737332, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650322, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650360, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle in transaction', '14944', None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-16 20:55:54.885242('Running process  - ', (36704, 'ce-emp-preprod', 1522248, None, 36708, 'ce_emp_preprod_dbo', 'DBeaver 23.0.2 - SQLEditor <Script-2.sql>', '51.159.113.146', None, 49154, datetime.datetime(2023, 8, 16, 18, 35, 41, 108353, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 42, 737332, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650322, tzinfo=datetime.timezone.utc), datetime.datetime(2023, 8, 16, 18, 35, 46, 650360, tzinfo=datetime.timezone.utc), 'Client', 'ClientRead', 'idle in transaction', '14944', None, None, 'SHOW search_path', 'client backend'), '\n')
+INFO:root:2023-08-17 09:59:13.480665 no long process (10 mn)
+INFO:root:2023-08-17 09:59:25.347267 no long process (10 mn)
+INFO:root:2023-08-17 09:59:47.365123 no long process (10 mn)
+INFO:root:2023-08-17 10:05:51.491611 no long process (10 mn)
+INFO:root:2023-08-17 10:07:51.815476 no long process (10 mn)
+INFO:root:2023-08-17 10:08:40.869667 no long process (10 mn)
+INFO:root:2023-08-17 10:11:18.628230 no long process (10 mn)
+INFO:root:2023-08-17 10:15:56.665148 no long process (10 mn)
+INFO:root:2023-08-17 10:18:22.570774 no long process (10 mn)
+INFO:root:2023-08-17 10:18:59.742984 no long process (10 mn)
+INFO:root:2023-08-17 10:19:11.907888 no long process (10 mn)
+INFO:root:2023-08-17 10:19:50.268060 no long process (10 mn)
+INFO:root:2023-08-17 10:20:57.322437 no long process (10 mn)
+INFO:root:2023-08-17 10:29:00.607068 no long process (10 mn)
+INFO:root:2023-08-17 10:32:03.632672 no long process (10 mn)
+INFO:root:2023-08-17 10:34:07.607981 no long process (10 mn)
+INFO:root:2023-08-17 10:35:09.239816 no long process (10 mn)
+INFO:root:2023-08-17 10:37:29.492145 no long process (10 mn)
+INFO:root:2023-08-17 10:37:41.536342 no long process (10 mn)
+INFO:root:2023-08-17 10:39:35.905051 no long process (10 mn)
+INFO:root:2023-08-17 10:40:03.071817 no long process (10 mn)
+INFO:root:2023-08-17 10:42:25.882180 no long process (10 mn)
+INFO:root:2023-08-17 10:57:43.854766 no long process (10 mn)
+INFO:root:2023-08-17 10:58:25.894080 no long process (10 mn)
+INFO:root:2023-08-18 10:01:09.133740 no long process (10 mn)
+INFO:root:2023-08-18 10:02:04.063297 no long process (10 mn)
+INFO:root:2023-08-18 10:03:34.452804 no long process (10 mn)
+INFO:root:2023-08-18 10:06:33.615351 no long process (10 mn)
+INFO:root:2023-08-18 10:07:37.152450 no long process (10 mn)
+INFO:root:2023-08-18 10:08:18.125434 no long process (10 mn)
+INFO:root:2023-08-18 10:08:36.986375 no long process (10 mn)
+INFO:root:2023-08-18 10:10:08.379336 no long process (10 mn)
+INFO:root:2023-08-19 09:59:40.313493 no long process (10 mn)
+INFO:root:2023-08-19 14:39:52.707205 no long process (10 mn)
+INFO:root:2023-08-19 14:43:04.338973 no long process (10 mn)
+INFO:root:2023-08-19 14:43:50.080032 no long process (10 mn)
+INFO:root:2023-08-19 14:44:17.431352 no long process (10 mn)
+INFO:root:2023-08-19 14:44:27.144064 no long process (10 mn)
+INFO:root:2023-08-19 14:45:35.564121 no long process (10 mn)
+INFO:root:2023-08-19 14:45:55.935210 no long process (10 mn)
+INFO:root:2023-08-19 14:46:08.311391 no long process (10 mn)
+INFO:root:2023-08-19 15:56:56.169467 no long process (10 mn)
+INFO:root:2023-08-19 15:57:30.564027 no long process (10 mn)
+INFO:root:2023-08-19 15:57:56.161538 no long process (10 mn)
+INFO:root:2023-08-20 10:56:53.559855 no long process (10 mn)
+INFO:root:2023-08-20 10:57:08.278419 no long process (10 mn)
+INFO:root:2023-08-20 11:05:31.164890 no long process (10 mn)
+INFO:root:2023-08-20 11:05:56.805811 no long process (10 mn)
+INFO:root:2023-08-20 11:08:19.240894 no long process (10 mn)
+INFO:root:2023-08-20 11:09:15.318638 no long process (10 mn)
+INFO:root:2023-08-20 11:10:53.585730 no long process (10 mn)
+INFO:root:2023-08-20 11:16:21.880593 no long process (10 mn)
+INFO:root:2023-08-20 11:23:57.737216 no long process (10 mn)
+INFO:root:2023-08-29 18:46:34.837282 no long process (10 mn)
+INFO:root:2023-08-29 21:57:57.896246 no long process (10 mn)
+INFO:root:2023-08-30 10:06:53.069212 no long process (10 mn)
+INFO:root:2023-08-30 10:08:13.463355 no long process (10 mn)
+INFO:root:2023-08-30 10:09:20.033614 no long process (10 mn)
+INFO:root:2023-08-30 10:09:42.463152 no long process (10 mn)
+INFO:root:2023-08-30 10:13:32.270111 no long process (10 mn)
+INFO:root:2023-09-01 10:44:13.486967 no long process (10 mn)
+INFO:root:2023-09-01 10:44:55.946761 no long process (10 mn)
+INFO:root:2023-09-01 14:56:55.305593 no long process (10 mn)
+INFO:root:2023-09-20 17:03:06.641852 no long process (10 mn)
+INFO:root:2023-09-20 17:11:48.217524 no long process (10 mn)
+INFO:root:2023-09-20 17:16:04.677045 no long process (10 mn)
+INFO:root:2023-09-20 17:17:04.664037 no long process (10 mn)
+INFO:root:2023-10-01 18:10:36.760663 no long process (10 mn)
+INFO:root:2023-10-01 19:08:25.635599 no long process (10 mn)
+INFO:root:2023-10-01 20:09:23.933261 no long process (10 mn)
+INFO:root:2023-10-01 20:10:56.889871 no long process (10 mn)
+INFO:root:2023-10-02 13:17:47.115470 no long process (10 mn)
+INFO:root:2023-10-02 13:35:24.070614audit connection done
+INFO:root:2023-10-02 13:37:39.412114audit connection done
+INFO:root:2023-10-02 13:38:27.722439audit connection done
+INFO:root:2023-10-02 13:39:03.287712audit connection done
+INFO:root:2023-10-02 13:40:43.640655audit connection done
+INFO:root:2023-10-02 13:45:31.570980 no long process (10 mn)
+INFO:root:2023-10-02 13:50:27.370475audit connection done
+INFO:root:2023-10-02 13:50:55.859583audit connection done
+INFO:root:2023-10-02 13:52:15.509275audit connection done
+INFO:root:2023-10-02 13:52:34.552761 no long process (10 mn)
+INFO:root:2023-10-02 13:53:14.665008 no long process (10 mn)
+INFO:root:2023-10-02 13:53:20.722348audit connection done
+INFO:root:2023-10-02 13:54:43.648512audit connection done
+INFO:root:2023-10-02 13:55:01.759042audit connection done
+INFO:root:2023-10-02 13:55:50.555062audit connection done
+INFO:root:2023-10-02 13:56:31.928554audit connection done
+INFO:root:2023-10-02 13:56:59.255468audit connection done
+INFO:root:2023-10-13 19:43:48.038924audit table details done
+INFO:root:2023-10-13 19:44:14.306726audit table details done
+INFO:root:2023-10-13 19:45:53.074210audit table details done
+INFO:root:2023-10-13 19:46:31.019122audit table details done
+INFO:root:2023-10-13 19:53:41.906847audit table details done
+INFO:root:2023-10-13 19:53:48.518987audit connection done
+INFO:root:2023-10-23 08:44:09.390537audit connection done
+INFO:root:2023-10-23 08:45:58.814250audit connection done
+INFO:root:2023-10-23 08:46:08.591466audit connection done
+INFO:root:2023-10-23 08:47:47.852895audit connection done
+INFO:root:2023-10-23 08:48:00.323084audit connection done
+INFO:root:2023-10-23 08:48:42.431479audit connection done
+INFO:root:2023-10-23 08:48:48.571555audit connection done
+INFO:root:2023-10-23 08:48:58.739340audit connection done
+INFO:root:2023-10-23 08:49:32.054190audit connection done
+INFO:root:2023-10-23 08:49:46.537233audit connection done
+INFO:root:2023-10-23 08:49:58.303299audit connection done
+INFO:root:2023-10-23 08:50:32.912875audit connection done
+INFO:root:2023-10-23 08:50:52.654842audit connection done
+INFO:root:2023-10-23 08:51:27.169902audit connection done
+INFO:root:2023-10-23 08:55:17.850903audit connection done
+INFO:root:2023-10-23 08:55:40.723919audit table details done
+INFO:root:2023-10-23 08:55:40.724919audit connection done
+INFO:root:2023-10-23 08:57:28.202790audit connection done
+INFO:root:2023-10-23 08:57:44.034070audit table details done with -1 rows
+INFO:root:2023-10-23 08:57:44.034570audit connection done
+INFO:root:2023-10-23 09:00:41.858292audit table details done with -1 rows
+INFO:root:2023-10-23 09:00:41.893799audit table details done
+INFO:root:2023-10-23 09:06:41.194671audit table details done with -1 rows
+INFO:root:2023-10-23 09:06:41.195171audit connection done
+INFO:root:2023-10-23 09:31:25.990801 no long process (10 mn)
+INFO:root:2023-11-16 15:26:37.216062audit active connections done with -1 rows
+INFO:root:2023-11-16 15:26:37.247068audit table details done
+INFO:root:2023-11-16 15:30:24.860953audit table details done   with -1 rows
+INFO:root:2023-11-16 15:30:24.872957audit table details done
+INFO:root:2023-11-16 15:32:46.283736audit table details done   with -1 rows
+INFO:root:2023-11-16 15:32:46.344747audit table details done
+INFO:root:2023-11-16 15:35:47.044129audit table details done   with -1 rows
+INFO:root:2023-11-16 15:35:47.045130audit table details done
+INFO:root:2023-11-16 15:36:32.422071audit table details done   with -1 rows
+INFO:root:2023-11-16 15:36:32.422572audit table details done
+INFO:root:2023-11-16 15:36:59.701489audit table details done   with -1 rows
+INFO:root:2023-11-16 15:36:59.701990audit table details done
+INFO:root:2023-11-16 15:38:52.990892audit table details done   with -1 rows
+INFO:root:2023-11-16 15:38:52.991393audit table details done
+INFO:root:2023-11-16 15:39:00.970883audit table details done   with -1 rows
+INFO:root:2023-11-16 15:39:00.971384audit table details done
+INFO:root:2023-11-16 15:39:56.827021audit table details done   with -1 rows
+INFO:root:2023-11-16 15:39:56.827520audit table details done
+INFO:root:2023-11-16 15:41:45.514951audit table details done   with -1 rows
+INFO:root:2023-11-16 15:41:45.515453audit table details done
+INFO:root:2023-11-16 15:42:01.170198audit table details done   with -1 rows
+INFO:root:2023-11-16 15:42:01.170699audit table details done
+INFO:root:2023-11-16 15:43:06.751141audit table details done   with -1 rows
+INFO:root:2023-11-16 15:43:06.751642audit table details done
+INFO:root:2023-11-16 15:46:44.387417audit table details done   with -1 rows
+INFO:root:2023-11-16 15:46:44.387918audit table details done
+INFO:root:2023-11-16 15:47:19.961442audit table details done   with -1 rows
+INFO:root:2023-11-16 15:47:19.961941audit table details done
+INFO:root:2023-11-16 15:48:25.626122audit table details done   with -1 rows
+INFO:root:2023-11-16 15:48:25.626623audit table details done
+INFO:root:2023-11-16 15:48:58.762279audit table details done   with -1 rows
+INFO:root:2023-11-16 15:48:58.762781audit table details done
+INFO:root:2023-11-17 10:20:53.020138 no long process (10 mn)
+INFO:root:2023-11-17 10:21:17.584942Error running audit table details done
+INFO:root:2023-11-17 10:21:17.585943audit table details done
+INFO:root:2023-11-17 10:21:42.942887Error running audit table details done
+INFO:root:2023-11-17 10:21:42.943387audit table details done
+INFO:root:2023-11-17 10:23:00.231930audit table details done   with -1 rows
+INFO:root:2023-11-17 10:23:00.232930audit table details done
+INFO:root:2023-11-17 10:23:25.694393Error running audit table details done
+INFO:root:2023-11-17 10:23:25.695393audit table details done
+INFO:root:2023-11-17 10:24:37.614995Error running audit table details done
+INFO:root:2023-11-17 10:24:37.615496audit table details done
+INFO:root:2023-11-17 10:25:12.918182Error running audit table details done
+INFO:root:2023-11-17 10:25:12.918682audit table details done
+INFO:root:2023-11-17 10:25:40.082942Error running audit table details done
+INFO:root:2023-11-17 10:25:40.083441audit table details done
+INFO:root:2023-11-17 10:25:49.642617audit table details done   with -1 rows
+INFO:root:2023-11-17 10:25:49.643617audit table details done
+INFO:root:2023-11-17 10:26:31.409435audit table details done   with -1 rows
+INFO:root:2023-11-17 10:26:31.409936audit table details done
+INFO:root:2023-11-17 10:34:35.966572audit table details done   with -1 rows
+INFO:root:2023-11-17 10:34:35.967072audit table details done
+INFO:root:2023-11-17 10:35:21.952921audit table details done with -1 rows
+INFO:root:2023-11-17 10:35:21.953922audit connection done
+INFO:root:2023-11-17 15:38:56.506999audit table details done with -1 rows
+INFO:root:2023-11-17 15:38:56.508044audit connection done
+INFO:root:2023-11-17 15:39:00.454852audit table details done   with -1 rows
+INFO:root:2023-11-17 15:39:00.455353audit table details done
+INFO:root:2023-11-17 15:39:17.271225audit table details done   with -1 rows
+INFO:root:2023-11-17 15:39:17.271726audit table details done
+INFO:root:2023-11-17 15:41:11.072428Error running audit table details done
+INFO:root:2023-11-17 15:41:11.073428audit table details done
+INFO:root:2023-11-17 15:42:21.615669audit table details done   with -1 rows
+INFO:root:2023-11-17 15:42:21.615869audit table details done
+INFO:root:2023-11-17 15:42:29.553639audit table details done   with -1 rows
+INFO:root:2023-11-17 15:42:29.554140audit table details done
+INFO:root:2023-11-17 15:42:40.480747audit table details done   with -1 rows
+INFO:root:2023-11-17 15:42:40.481136audit table details done
+INFO:root:2023-11-17 15:42:53.648907 no long process (10 mn)
+INFO:root:2023-11-17 15:43:13.094278audit table details done with -1 rows
+INFO:root:2023-11-17 15:43:13.094640audit connection done
+INFO:root:2023-12-13 15:17:13.089259backup done
+INFO:root:2023-12-13 15:41:52.335633backup done
+INFO:root:2023-12-13 15:42:55.160422backup done
+INFO:root:2023-12-13 16:13:08.972229backup done
+INFO:root:2023-12-13 16:22:12.298102backup done
+INFO:root:2023-12-13 16:54:34.189377backup done
+INFO:root:2023-12-13 16:55:52.914806backup done
+INFO:root:2023-12-13 17:04:51.495202backup done
+INFO:root:2023-12-13 17:11:58.034240backup done
+INFO:root:2023-12-13 17:12:18.068979backup done
+INFO:root:2023-12-13 17:16:45.413394backup done
+INFO:root:2023-12-13 17:25:46.845409backup done
+INFO:root:2023-12-13 18:07:13.302313backup done
+INFO:root:2023-12-13 18:10:29.689975backup done
+INFO:root:2023-12-13 18:10:58.480502backup done
+INFO:root:2023-12-13 18:18:01.103208backup done
+INFO:root:2023-12-14 12:10:44.034640backup done
+INFO:root:2023-12-14 12:17:08.740607backup done
+INFO:root:2023-12-14 12:19:51.113281backup done
+INFO:root:2023-12-14 12:20:35.848621backup done
+INFO:root:2023-12-14 12:21:27.857846backup done
+INFO:root:2023-12-14 12:25:27.786070backup done
+INFO:root:2023-12-14 12:27:12.134710backup done
+INFO:root:2023-12-14 12:28:33.284928backup done
+INFO:root:2023-12-14 12:28:49.199881backup done
+INFO:root:2023-12-14 12:29:33.969499backup done
+INFO:root:2023-12-14 12:30:01.522575backup done
+INFO:root:2023-12-14 12:54:42.547803backup done
+INFO:root:2023-12-14 12:58:15.420618backup done
+INFO:root:2023-12-14 12:58:57.969312backup done
+INFO:root:2023-12-14 13:00:25.780639backup done
+INFO:root:2023-12-14 13:01:50.899416backup done
+INFO:root:2023-12-14 13:02:30.572772backup done
+INFO:root:2023-12-14 13:03:50.746250backup done
+INFO:root:2023-12-14 13:04:07.667460backup done
+INFO:root:2023-12-14 13:07:15.769190backup done
+INFO:root:2023-12-14 13:07:34.298074backup done
+INFO:root:2023-12-14 14:38:11.747560backup done
+INFO:root:2023-12-14 14:38:40.962859backup done
+INFO:root:2023-12-14 14:38:49.825780backup done
+INFO:root:2023-12-14 14:39:12.114186backup done
+INFO:root:2023-12-23 17:42:20.383966  running vaccuum analyze
+INFO:root:2023-12-23 17:44:40.731911  running vaccuum analyze
+INFO:root:2023-12-23 17:52:49.130043  running vaccuum analyze
+INFO:root:2023-12-23 17:53:52.774719  running vaccuum analyze
+INFO:root:2023-12-23 17:55:30.685304  running vaccuum analyze
+INFO:root:2023-12-23 17:57:37.542980  running vaccuum analyze
+INFO:root:2023-12-23 18:03:36.293828  running vaccuum analyze
+INFO:root:2023-12-23 18:06:07.671369  running vaccuum analyze
+INFO:root:2023-12-23 18:27:50.265942  running vaccuum analyze
+INFO:root:2023-12-23 18:38:32.936277  running vaccuum analyze
+INFO:root:2023-12-23 18:40:04.187499  running vaccuum analyze
+INFO:root:2023-12-23 18:40:54.981149  running vaccuum analyze
+INFO:root:2023-12-23 18:42:23.789735  running vaccuum analyze
+INFO:root:2023-12-23 18:45:50.424020  running vaccuum analyze
+INFO:root:2023-12-23 18:46:40.587952  running vaccuum analyze
+INFO:root:2023-12-23 18:56:05.024998  running vaccuum analyze
+INFO:root:2023-12-23 21:10:20.593470  running vaccuum analyze
+INFO:root:2023-12-24 09:59:18.069093  running vaccuum analyze
+INFO:root:2023-12-24 10:00:11.942055  running vaccuum analyze
+INFO:root:2023-12-24 10:00:37.876114  running vaccuum analyze
+INFO:root:2023-12-24 10:05:00.667265  running vaccuum analyze
+INFO:root:2023-12-24 10:06:49.613398  running vaccuum analyze
+INFO:root:2023-12-24 10:07:22.654700  running vaccuum analyze
+INFO:root:2023-12-24 10:07:35.946034  running vaccuum analyze
+INFO:root:2023-12-24 10:10:59.657310  running vaccuum analyze
+INFO:root:2023-12-24 10:11:12.561576  running vaccuum analyze
+INFO:root:2023-12-24 10:11:49.473560  running vaccuum analyze
+INFO:root:2023-12-24 10:55:33.461313  running vaccuum analyze
+INFO:root:2023-12-24 11:31:18.957521  running vaccuum analyze
+INFO:root:2023-12-24 16:27:29.038208  running vaccuum analyze
+INFO:root:2023-12-24 16:27:45.143628  running vaccuum analyze
+INFO:root:2023-12-24 16:31:07.483849  running vaccuum analyze
+INFO:root:2023-12-24 16:31:25.222996  running vaccuum analyze
+INFO:root:2023-12-24 16:32:31.392422  running vaccuum analyze
+INFO:root:2023-12-24 16:32:49.491252  running vaccuum analyze
+INFO:root:2023-12-24 16:33:18.574818  running vaccuum analyze
+INFO:root:2023-12-24 16:33:46.744789  running vaccuum analyze
+INFO:root:2023-12-24 16:34:16.510207  running vaccuum analyze
+INFO:root:2023-12-24 16:36:48.293548  running vaccuum analyze
+INFO:root:2023-12-24 16:37:08.368956  running vaccuum analyze
+INFO:root:2023-12-24 16:49:08.405818  running vaccuum analyze
+INFO:root:2023-12-24 16:49:55.044320  running vaccuum analyze
+INFO:root:2023-12-24 16:50:21.318124  running vaccuum analyze
+INFO:root:2023-12-24 16:51:05.693232  running vaccuum analyze
+INFO:root:2023-12-24 16:54:38.572612  running vaccuum analyze
+INFO:root:2023-12-24 16:54:50.742914  running vaccuum analyze
+INFO:root:2023-12-24 16:55:14.841912  running vaccuum analyze
+INFO:root:2023-12-24 16:56:47.150544  running vaccuum analyze
+INFO:root:2023-12-24 16:56:56.607454  running vaccuum analyze
+INFO:root:2023-12-24 16:57:25.007515  running vaccuum analyze
+INFO:root:2023-12-24 16:57:43.433066  running vaccuum analyze
+INFO:root:2023-12-24 16:58:33.130006  running vaccuum analyze
+INFO:root:2023-12-24 16:58:43.283406  running vaccuum analyze
+INFO:root:2023-12-24 17:00:08.817198  running vaccuum analyze
+INFO:root:2023-12-24 17:00:40.140679  running vaccuum analyze
+INFO:root:2023-12-24 17:01:02.351232  running vaccuum analyze
+INFO:root:2023-12-24 17:01:22.956790  running vaccuum analyze
+INFO:root:2023-12-24 17:02:13.118441  running vaccuum analyze
+INFO:root:2023-12-24 17:02:52.544788  running vaccuum analyze
+INFO:root:2023-12-24 17:03:31.933892  running vaccuum analyze
+INFO:root:2023-12-24 17:09:39.611747  running vaccuum analyze
+INFO:root:2023-12-24 17:10:27.541913  running vaccuum analyze
+INFO:root:2023-12-24 17:12:52.519033  running vaccuum analyze
+INFO:root:2023-12-24 17:13:12.548762  running vaccuum analyze
+INFO:root:2023-12-24 17:13:44.170536  running vaccuum analyze
+INFO:root:2023-12-24 17:14:18.056828  running vaccuum analyze
+INFO:root:2023-12-24 17:15:18.901073  running vaccuum analyze
+INFO:root:2023-12-24 17:15:56.757558  running vaccuum analyze
+INFO:root:2023-12-24 17:17:13.147077  running vaccuum analyze
+INFO:root:2023-12-24 17:17:30.333798  running vaccuum analyze
+INFO:root:2023-12-24 17:18:11.763717  running vaccuum analyze
+INFO:root:2023-12-24 17:19:32.755671  running vaccuum analyze
+INFO:root:2023-12-24 17:21:47.120364  running vaccuum analyze
+INFO:root:2023-12-24 17:33:27.465177  running vaccuum analyze
+INFO:root:2023-12-24 17:35:34.941892  running vaccuum analyze
+INFO:root:2023-12-24 17:36:13.313934  running vaccuum analyze
+INFO:root:2023-12-24 17:37:24.680684  running vaccuum analyze
+INFO:root:2023-12-24 17:37:36.326405  running vaccuum analyze
+INFO:root:2023-12-24 17:38:04.263690  running vaccuum analyze
+INFO:root:2023-12-24 17:39:31.598290  running vaccuum analyze
+INFO:root:2023-12-24 17:40:01.701350  running vaccuum analyze
+INFO:root:2023-12-25 09:43:50.035151  running vaccuum analyze
+INFO:root:2023-12-25 09:56:34.497091  running vaccuum analyze
+INFO:root:2023-12-25 09:57:07.232786  running vaccuum analyze
+INFO:root:2023-12-25 10:30:24.746469  running vaccuum analyze
+INFO:root:2023-12-25 10:32:08.371480  running vaccuum analyze
+INFO:root:2023-12-25 10:36:23.699667  running vaccuum analyze
+INFO:root:2023-12-25 10:37:14.378352  running vaccuum analyze
+INFO:root:2023-12-25 11:37:09.041840  running vaccuum analyze
+INFO:root:2023-12-25 11:37:28.103898  running vaccuum analyze
+INFO:root:2023-12-25 11:40:17.415487  running vaccuum analyze
+INFO:root:2023-12-25 11:41:11.844449  running vaccuum analyze
+INFO:root:2023-12-25 11:42:59.349626  running vaccuum analyze
+INFO:root:2023-12-25 11:43:15.109795  running vaccuum analyze
+INFO:root:2023-12-25 11:43:53.463544  running vaccuum analyze
+INFO:root:2023-12-25 11:44:45.079653  running vaccuum analyze
+INFO:root:2023-12-25 11:45:25.952419  running vaccuum analyze
+INFO:root:2023-12-25 11:45:42.662598  running vaccuum analyze
+INFO:root:2023-12-25 11:46:56.699073  running vaccuum analyze
+INFO:root:2023-12-25 11:47:22.574223  running vaccuum analyze
+INFO:root:2023-12-25 11:47:42.805382  running vaccuum analyze
+INFO:root:2023-12-25 11:47:53.139415  running vaccuum analyze
+INFO:root:2023-12-25 11:49:21.976502  running vaccuum analyze
+INFO:root:2023-12-25 11:49:44.598713  running vaccuum analyze
+INFO:root:2023-12-25 11:50:17.586140  running vaccuum analyze
+INFO:root:2023-12-25 11:55:00.515602  running vaccuum analyze
+INFO:root:2023-12-25 11:55:14.580980  running vaccuum analyze
+INFO:root:2023-12-25 11:55:29.098080  running vaccuum analyze
+INFO:root:2023-12-25 11:57:16.389120  running vaccuum analyze
+INFO:root:2023-12-25 11:58:03.256444  running vaccuum analyze
+INFO:root:2023-12-25 12:00:23.404919  running vaccuum analyze
+INFO:root:2023-12-25 12:00:34.489296  running vaccuum analyze
+INFO:root:2023-12-25 14:18:33.464819  running vaccuum analyze
+INFO:root:2023-12-25 14:22:10.766607  running vaccuum analyze
+INFO:root:2023-12-25 14:23:30.468970  running vaccuum analyze
+INFO:root:2023-12-25 14:29:06.523172  running vaccuum analyze
+INFO:root:2023-12-25 14:29:27.732429  running vaccuum analyze
+INFO:root:2023-12-25 14:30:44.630686  running vaccuum analyze
+INFO:root:2023-12-25 14:31:49.442893  running vaccuum analyze
+INFO:root:2023-12-25 14:32:32.671798  running vaccuum analyze
+INFO:root:2023-12-25 14:33:15.138024  running vaccuum analyze
+INFO:root:2023-12-25 16:26:31.661735  running vaccuum analyze
+INFO:root:2023-12-25 16:26:45.141385  running vaccuum analyze
+INFO:root:2023-12-25 16:27:07.800781  running vaccuum analyze
+INFO:root:2023-12-25 16:27:08.674441param name disk_usage_percent , value : 28.770914 , limit : 0 for date 2023-12-25T15:27:07Z and node {'node': 'node 1211d030'}
+INFO:root:2023-12-25 16:27:12.543862param name disk_usage_percent , value : 28.769695 , limit : 0 for date 2023-12-25T15:27:07Z and node {'node': 'node 23a1e212'}
+INFO:root:2023-12-25 16:35:51.784700  running vaccuum analyze
+INFO:root:2023-12-25 16:37:47.600000  running vaccuum analyze
+INFO:root:2023-12-25 16:37:50.297000param name cpu_usage_percent , value : 4.695833 , limit : 1 for date 2023-12-25T15:37:47Z and node {'node': 'node 1211d030'}
+INFO:root:2023-12-25 16:37:52.414507param name cpu_usage_percent , value : 2.7666667 , limit : 1 for date 2023-12-25T15:37:47Z and node {'node': 'node 23a1e212'}
+INFO:root:2023-12-25 16:37:54.535570param name disk_usage_percent , value : 28.770922 , limit : 1 for date 2023-12-25T15:37:47Z and node {'node': 'node 1211d030'}
+INFO:root:2023-12-25 16:38:02.375330param name disk_usage_percent , value : 28.769695 , limit : 1 for date 2023-12-25T15:37:48Z and node {'node': 'node 23a1e212'}
+INFO:root:2023-12-25 16:39:41.728681  running vaccuum analyze
+INFO:root:2023-12-25 16:39:46.777955  running vaccuum analyze
+INFO:root:2023-12-25 16:40:11.379732  running vaccuum analyze
+INFO:root:2023-12-25 16:41:51.550796  running vaccuum analyze
+INFO:root:2023-12-25 16:46:09.910389  running vaccuum analyze
+INFO:root:2023-12-25 16:53:13.382494  running vaccuum analyze
+INFO:root:2023-12-25 16:55:27.332653  running vaccuum analyze
+INFO:root:2023-12-25 16:55:49.932625  running vaccuum analyze
+INFO:root:2023-12-25 16:56:33.957682  running vaccuum analyze
+INFO:root:2023-12-25 16:56:46.910027  running vaccuum analyze
+INFO:root:2023-12-25 16:57:10.670196  running vaccuum analyze
+INFO:root:2023-12-25 16:57:27.346535  running vaccuum analyze
