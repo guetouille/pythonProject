@@ -20,12 +20,9 @@ def reset_pg_stat_statements(connection):
         # Fetch result
         record = cursor.fetchone()
     except (Exception, Error) as error:
-        print("Error while connecting to PostgreSQL", error)
+        print("Error while connecting to PostgreSQL in reset_pg_stat_statements", error)
     finally:
-        if (connection):
-            #cursor.close()
-            connection.close()
-            #print("PostgreSQL connection is closed")
+       
             return message,status,conn_detail
 
 def get_pg_stat_statements(connection ):
@@ -65,6 +62,7 @@ def get_pg_stat_statements(connection ):
       </body>
     </html>
     '''
+    query2 = 'select pg_stat_statements_reset();'
     conn_param=""
     df_1= pd.DataFrame()
     try:
@@ -76,6 +74,8 @@ def get_pg_stat_statements(connection ):
         with open('myhtml2.html', 'w') as f:
             f.write(html_string.format(table_1=df_1.to_html(classes='mystyle')))
         f.close()
+        #cursor2 = connection.cursor()
+        #cursor.execute(query2)
         #connection.close()
     except (Exception, Error) as error:
         print("Error while connecting to PostgreSQL", error)

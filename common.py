@@ -17,15 +17,19 @@ from dateutil.relativedelta import relativedelta
 import rfc3339      # for date object -> date string
 import pytz
 import common
+from email.mime.multipart import MIMEMultipart 
+from email.mime.text import MIMEText 
+from email.mime.application import MIMEApplication
+import ssl
 
 def send_mail1(message, conn_detail):
-    disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection,mailist=common.read_config_monitoring('monitoring')
+    disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection=common.read_config_monitoring('monitoring')
     smtp_obj = smtplib.SMTP('smtp.mail.me.com', 587)
     smtp_obj.starttls()
     smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
     #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com', 'name_3': 'walid.jlidi@club-employes.com','name_4': 'ghazi.bensaid@club-employes.com'}
     pairs = {'name_1': 'gaetan.perez@icloud.com'}
-    pairs = mailist
+    
     try:
         for name in pairs.keys():
 
@@ -49,23 +53,90 @@ def decodepass(text):
     print (encrypted)
     print (decrypted)
 
-def send_mail2(message, conn_detail):
-    disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection,mailist=common.read_config_monitoring('monitoring')
+def send_mail_html(message, conn_detail):
     smtp_obj = smtplib.SMTP('smtp.mail.me.com', 587)
     smtp_obj.starttls()
     smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
-    pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com','name_3': 'walid.jlidi@club-employes.com', 'name_4': 'ghazi.bensaid@club-employes.com'}
-    #pairs = {'name_1': 'gaetan.perez@icloud.com'}
-    pairs = mailist
+    #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com','name_3': 'walid.jlidi@club-employes.com', 'name_4': 'ghazi.bensaid@club-employes.com'}
+    maillist ="gaetan.perez@icloud.com;nicolas.lebatteux@gmail.com;walid.jlidi@club-employes.com;ghazi.bensaid@club-employes.com"
+    cclist = ""
+    smtp_server='smtp.mail.me.com'
+    smtp_port = 587
+    gmail = 'gaetan.perez@icloud.com'
+    password = 'toat-dcbf-hute-cedb'
+    
+    try:
+        
+        message = MIMEMultipart('mixed')
+        message['From'] = ' <{sender}>'.format(sender = "gaetan.perez@icloud.com")
+        message['To'] = maillist
+        message['CC'] = ''
+        message['Subject'] = 'Query report for Postgre Server '
+        msg_content = '<h4>Hi There,<br> Query report for Postgre Server {}.</h4>\n'.format(conn_detail)
+        body = MIMEText(msg_content, 'html')
+        message.attach(body)
+        attachmentPath = "myhtml2.html"
+        with open(attachmentPath) as attachment:
+
+            p = MIMEApplication(attachment.read(),_subtype="html")	
+            p.add_header('Content-Disposition', "attachment; filename= %s" % attachmentPath.split("\\")[-1]) 
+            message.attach(p)
+            msg_full = message.as_string()
+            context = ssl.create_default_context()
+            with smtplib.SMTP(smtp_server, smtp_port) as server:
+                server.ehlo()  
+                server.starttls(context=context)
+                server.ehlo()
+                server.login(gmail, password)
+                server.sendmail(gmail,maillist.split(";") + (cclist.split(";") if cclist else []),msg_full)
+                server.quit()
+
+            print("email sent out successfully")
+            print('Sending email to {}...'.format(maillist))
+    except Exception as e:
+	        print(str(e))   
+    
+        
+
+def logging_info(message):
+    mypath=Path.cwd()
+    logging.basicConfig(filename=str(mypath) + "/gp_monitoring.log", level=logging.INFO)
+    logging.info(message)
+def send_log_to_graphana():
+    handler = logging_loki.LokiHandler(
+        url="https://logs.cockpit.fr-par.scw.cloud/loki/api/v1/push",
+        tags={"job": "logs_from_python"},
+        auth=("api_key", "26VdClopfloSKBdNKtK0xj8rkco3UZSZo1sncu82CLgTumOCTYcyRcO-HmpUv5Xt"),
+        version="1",
+    )
+    logger = logging.getLogger("my-first-python-logger")
+    logger.addHandler(handler)
+    logger.error(
+        "Logging a python error with Scaleway cockpit example",
+        extra={"tags": {"service": "my-service"}},
+    )
+    print("Log sent")
+    
+
+def send_mail2(message, conn_detail):
+    disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection=common.read_config_monitoring('monitoring')
+    smtp_obj = smtplib.SMTP('smtp.mail.me.com', 587)
+    smtp_obj.starttls()
+    smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
+    #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com','name_3': 'walid.jlidi@club-employes.com', 'name_4': 'ghazi.bensaid@club-employes.com'}
+    pairs = {'name_1': 'gaetan.perez@icloud.com'}
+    html = open("myhtml2.html")
+    msghtml = MIMEText(html.read(), 'html')
     try:
         for name in pairs.keys():
-
+            msg_content = '<h4>Hi There,<br> Query report for Postgre Server {}.</h4>\n'.format(conn_detail)
+            body = MIMEText(msg_content, 'html')
             msg = (
                 'From: {}\r\nTo: {}\r\n\r\n Subject: Query report for Postgre Server {}\r\r  {} \r '.format(
                     smtp_obj.user,
                     pairs.get(name), conn_detail,
-                     str(message)))
-
+                     str(message))) 
+            msg = msghtml
             print('Sending email to {} at {}...'.format(name, pairs.get(name)))
 
             send_status = smtp_obj.sendmail(from_addr=smtp_obj.user,
@@ -115,8 +186,7 @@ def read_config_monitoring(section):
         cpu_usage_percent=config_object.get(section,'disk_usage_percent')
         memory_usage_percent=config_object.get(section,'memory_usage_percent')
         connection=config_object.get(section,'connection')
-        mailist=config_object.get(section,'mailist')
-    return (disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection,mailist)
+    return (disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection)
  
 def read_config_flatten(section):
     config_object = configparser.ConfigParser()

@@ -38,6 +38,7 @@ def mng_metrics(dic):
                                         common.send_mail1("Alert on Postgre", message)                              
 def load_metrics():
         user,password,host,port,database,connect_timeout,backup_path,instance_id,backup_api,secret=common.read_config_flatten("database")
+        
         latz = common.set_timezone("America/Los_Angeles")
         mydate = datetime.now(latz)
         iso_date= mydate.replace(microsecond=0).isoformat()

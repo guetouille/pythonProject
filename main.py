@@ -21,8 +21,8 @@ if __name__ == '__main__':
             mode = "pg_stats_statements"
             sql = get_pg_stat_statements.get_pg_stat_statements(connection)
             print(str(sql[0]))
-            common.send_mail2(sql[0], sql[1])
-            get_pg_stat_statements.reset_pg_stat_statements(connection)
+            common.send_mail_html(sql[0], sql[1])
+            #get_pg_stat_statements.reset_pg_stat_statements(connection)
         elif opt in ("idle"):
             connection = common.read_config("database")
             print(connection)
