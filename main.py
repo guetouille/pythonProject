@@ -49,15 +49,17 @@ if __name__ == '__main__':
             connection = common.read_config("database")
             print (connection)
             message = common.backup_database()
-            common.logging_info(str(datetime.datetime.now()) + "backup done")
+            common.logging_info(str(datetime.datetime.now()) + " backup done")
             common.logging_info(str(datetime.datetime.now()) + " purging backups")
             filemng.purge_older_backups(7)
             common.logging_info(str(datetime.datetime.now()) + "Calling backup in Scaleway")
             common.call_api()
         elif opt in ("restore"):
+            connection = common.read_config("database")
             common.restore_database()
-            common.logging_info(str(datetime.datetime.now()) + "restore done")
+            common.logging_info(str(datetime.datetime.now()) + " restore done")
         elif opt in ("vacuum"):
+            connection = common.read_config("database")
             common.logging_info(str(datetime.datetime.now()) + "  running vaccuum analyze")
             get_idle_tran.run_vacuum_analyze(connection)
         elif opt in ("metrics"):

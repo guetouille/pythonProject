@@ -3,7 +3,7 @@ import common
 
 def purge_older_backups(days_retention):
 
-    user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token=common.read_config_flatten("database")
+    user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token, region=common.read_config_flatten("database")
 
     now = time.time()
 

@@ -75,20 +75,16 @@ def get_db_size(connection,dbname):
 
 def run_vacuum_analyze(connection):
     query = "vacuum analyze;"
+    connection.autocommit = True
+    cursor = connection.cursor()
     
     try:
-        cursor = connection.cursor()
         cursor.execute(query) 
-        rowcount = cursor.rowcount
         
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error while running vaccuum analyze ", error)
         common.logging_info(str(datetime.datetime.now()) + " Error while running vaccuum analyze")
-    finally:
-        if (connection is not None):
-            cursor.close()
-            connection.close()
-
+    
 def get_table_space_detail(connection):
     query = "call monitoring.set_table_details();commit;"
     message =""

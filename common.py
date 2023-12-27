@@ -202,10 +202,11 @@ def read_config_flatten(section):
         instance_id=config_object.get(section,'instance_id')
         backup_api=config_object.get(section,'backup_api')
         secret= config_object.get(section,'secret')       
-    return (user,password,host,port,database,connect_timeout,backup_path,instance_id,backup_api,secret)
+        region= config_object.get(section,'region')   
+    return (user,password,host,port,database,connect_timeout,backup_path,instance_id,backup_api,secret,region)
         
 def create_essentials():        
-    user,password,host,port,database,ctimeout,backup_path,instance_id,backup_api,secret,region,metric_api=read_config_flatten("database")
+    user,password,host,port,database,ctimeout,backup_path,instance_id,backup_api,secret,region=read_config_flatten("database")
     db_name = database
     db_user = user
     db_password = password
@@ -277,7 +278,7 @@ def get_date_string(date_object):
   return rfc3339.rfc3339(date_object)
 
 def call_api():
-        user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token=read_config_flatten("database")
+        user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token,region=read_config_flatten("database")
         latz = set_timezone("America/Los_Angeles")
         mydate = datetime.now(latz).replace(year=datetime.now().year + 1)   
         iso_date= mydate.replace(microsecond=0).isoformat()
