@@ -62,21 +62,16 @@ def get_active_conn(connection):
 
 def get_db_size(connection,dbname):
     query = "SELECT pg_size_pretty( pg_database_size(%s));", (dbname)
-        
+    query = "insert into monitoring.db_size SELECT now(), 'ce-emp-prd', (pg_database_size('{}'));".format(dbname)    
     message =""
     status=""
+    cursor = connection.cursor()
     try:
-        cursor = connection.cursor()
-        conn_detail = connection.get_dsn_parameters()
         # Executing a SQL query
         cursor.execute(query)
         
     except (Exception, psycopg2.DatabaseError) as error:
-        print("Error while connecting to PostgreSQL", error)
-    finally:
-        if (connection is not None):
-            cursor.close()
-            connection.close()         
+        print("Error while connecting to PostgreSQL", error)     
 
 def run_vacuum_analyze(connection):
     query = "vacuum analyze;"
@@ -108,10 +103,7 @@ def get_table_space_detail(connection):
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error while connecting to PostgreSQL", error)
         common.logging_info(str(datetime.datetime.now()) + "Error running audit table details done")
-    finally:
-        if (connection is not None):
-            cursor.close()
-            connection.close()
+
 
 def send_metric_to_graphana():
     handler = logging_loki.LokiHandler(

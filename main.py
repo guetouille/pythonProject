@@ -40,9 +40,10 @@ if __name__ == '__main__':
             
         elif opt in ("table_details"):
             connection = common.read_config("database")
-            print (connection)
+            #print (connection)
             message = get_idle_tran.get_table_space_detail(connection)
             common.logging_info(str(datetime.datetime.now()) + "audit table details done")
+            message=get_idle_tran.get_db_size(connection,'ce-emp-prd')
          
         elif opt in ("backup"):
             connection = common.read_config("database")
@@ -64,6 +65,5 @@ if __name__ == '__main__':
             tab=metrics.load_metrics()
             metrics.mng_metrics(tab)
         
-
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()

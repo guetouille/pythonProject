@@ -33,7 +33,7 @@ def get_pg_stat_statements(connection ):
     html_string = '''
     <html>
       <head> 
-      <title>My Report</title>
+      <title>PG_STAT_STATEMENTS REPORT</title>
       <style>
       .mystyle {{
         font-size: 10pt; 
@@ -78,7 +78,7 @@ def get_pg_stat_statements(connection ):
         #cursor.execute(query2)
         #connection.close()
     except (Exception, Error) as error:
-        print("Error while connecting to PostgreSQL", error)
+        print("Error while executing pg_stat_statements query", error)
     finally:
         if (connection):
             cursor.close()

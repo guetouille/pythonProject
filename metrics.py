@@ -19,17 +19,17 @@ def mng_metrics(dic):
                                 #print (message)
                                 if (name == "disk_usage_percent"):
                                     if (float(value) >= int(disk_usage_percent)):
-                                        message = ("param name {} , value : {} , limit : {} for date {} and node {}".format(name,value,disk_usage_percent,p,node))
+                                        message = ("param name {} , value : {} , limit : {} at date {} and for node {}".format(name,value,disk_usage_percent,p,node))
                                         common.logging_info(str(datetime.now()) + message)
                                         common.send_mail1("Alert on Postgre", message)
                                 if (name == "cpu_usage_percent"):
                                     if (float(value) >= int(cpu_usage_percent)):
-                                        message = ("param name {} , value : {} , limit : {} for date {} and node {}".format(name,value,cpu_usage_percent,p,node))
+                                        message = ("param name {} , value : {} , limit : {} at date {} and for node {}".format(name,value,cpu_usage_percent,p,node))
                                         common.logging_info(str(datetime.now()) + message)
                                         common.send_mail1("Alert on Postgre", message)
                                 if (name =="memory_usage_percent"):
                                     if (float(value) >= int(memory_usage_percent)):
-                                        message = ("param name {} , value : {} , limit : {} for date {} and node {}".format(name,value,memory_usage_percent,p,node))
+                                        message = ("param name {} , value : {} , limit : {} at date {} and for node {}".format(name,value,memory_usage_percent,p,node))
                                         common.logging_info(str(datetime.now()) + message)
                                         common.send_mail1("Alert on Postgre", message)   
                                 if (name == "total_connections"):

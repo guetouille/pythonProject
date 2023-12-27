@@ -413,3 +413,21 @@ INFO:root:2023-12-26 15:00:55.068023param name disk_usage_percent , value : 28.7
 INFO:root:2023-12-26 15:02:25.884972  running check metrics
 INFO:root:2023-12-26 15:02:26.746123param name disk_usage_percent , value : 28.737257 , limit : 10 for date 2023-12-26T14:02:25Z and node {'node': 'node 1211d030'}
 INFO:root:2023-12-26 15:02:29.289070param name disk_usage_percent , value : 28.735838 , limit : 10 for date 2023-12-26T14:02:25Z and node {'node': 'node 23a1e212'}
+INFO:root:2023-12-26 22:51:47.837330audit table details done   with -1 rows
+INFO:root:2023-12-26 22:51:47.839329audit table details done
+INFO:root:2023-12-26 22:52:22.373475audit table details done   with -1 rows
+INFO:root:2023-12-26 22:52:22.373976audit table details done
+INFO:root:2023-12-26 23:08:46.078831audit table details done   with -1 rows
+INFO:root:2023-12-26 23:08:46.080331audit table details done
+INFO:root:2023-12-26 23:15:42.190578audit table details done   with -1 rows
+INFO:root:2023-12-26 23:15:42.192078audit table details done
+INFO:root:2023-12-26 23:16:14.884337audit table details done   with -1 rows
+INFO:root:2023-12-26 23:16:14.885337audit table details done
+INFO:root:2023-12-27 17:09:25.871425audit table details done   with -1 rows
+INFO:root:2023-12-27 17:09:25.872925audit table details done
+INFO:root:2023-12-27 17:10:10.883038audit table details done   with -1 rows
+INFO:root:2023-12-27 17:10:10.883538audit table details done
+INFO:root:2023-12-27 17:12:09.258686audit table details done   with -1 rows
+INFO:root:2023-12-27 17:12:09.259188audit table details done
+INFO:root:2023-12-27 17:12:41.773904audit table details done   with -1 rows
+INFO:root:2023-12-27 17:12:41.774404audit table details done
