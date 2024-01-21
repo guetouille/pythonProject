@@ -22,13 +22,14 @@ if __name__ == '__main__':
             sql = get_pg_stat_statements.get_pg_stat_statements(connection)
             print(str(sql[0]))
             common.send_mail_html(sql[0], sql[1])
-            #get_pg_stat_statements.reset_pg_stat_statements(connection)
+            get_pg_stat_statements.mng_reset_pg_stat_statements(connection)
         elif opt in ("idle"):
             connection = common.read_config("database")
-            print(connection)
             message = get_idle_tran.get_idle_in_tran(connection)
             if (message[1] == "OK"):
+                print (message)
                 common.logging_info(str(datetime.datetime.now()) + message[0])
+                
             else:
                 common.logging_info(str(datetime.datetime.now()) + str(message[0]))
                 common.send_mail1(message[0], message[1])
@@ -49,11 +50,11 @@ if __name__ == '__main__':
             connection = common.read_config("database")
             print (connection)
             message = common.backup_database()
-            common.logging_info(str(datetime.datetime.now()) + " backup done")
-            common.logging_info(str(datetime.datetime.now()) + " purging backups")
-            filemng.purge_older_backups(7)
+            common.logging_info(str(datetime.datetime.now()) + " local backup done")
+            common.logging_info(str(datetime.datetime.now()) + " purging local backups")
+            filemng.purge_older_backups(30)
             common.logging_info(str(datetime.datetime.now()) + "Calling backup in Scaleway")
-            common.call_api()
+            common.run_backup_scaleway()
         elif opt in ("restore"):
             connection = common.read_config("database")
             common.restore_database()

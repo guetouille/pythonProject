@@ -2,9 +2,10 @@ from datetime import datetime,timezone
 from dateutil.relativedelta import relativedelta 
 import common ,json
 from urllib import request, parse, error
+from psycopg2 import Error
 
-def mng_metrics(dic):
-      disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection,mailist=common.read_config_monitoring('monitoring')
+def mng_metrics(dic):      
+      disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection=common.read_config_monitoring('monitoring')
       #print(dic['timeseries'])
       #print(dic)
       for i in dic['timeseries']:
@@ -35,9 +36,12 @@ def mng_metrics(dic):
                                 if (name == "total_connections"):
                                     if (int(value) >= int(connection) ):
                                         common.logging_info(str(datetime.now()) + message)
-                                        common.send_mail1("Alert on Postgre", message)                              
+                                        common.send_mail1("Alert on Postgre", message)
+      #load_metrics(connection,disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection)                              
+
+
 def load_metrics():
-        user,password,host,port,database,connect_timeout,backup_path,instance_id,backup_api,secret=common.read_config_flatten("database")
+        user,password,host,port,database,connect_timeout,backup_path,instance_id,backup_api,secret,region=common.read_config_flatten("database")
         
         latz = common.set_timezone("America/Los_Angeles")
         mydate = datetime.now(latz)
@@ -56,4 +60,16 @@ def load_metrics():
             common.logging_info(str(datetime.datetime.now()) + "   res")
         return  dic
        
-        
+def insert_metrics(connection,disk_usage_percent,cpu_usage_percent,memory_usage_percent,totalconnection):
+        query = "insert into monitoring.server_mertics values ();"
+        try:
+            cursor = connection.cursor()
+            conn_detail = connection.get_dsn_parameters()
+            # Executing a SQL query
+            cursor.execute(query)
+            # Fetch result
+            record = cursor.fetchone()
+        except (Exception, Error) as error:
+            print("Error while connecting to PostgreSQL in reset_pg_stat_statements", error)
+        finally:
+            print("metrics inserted")

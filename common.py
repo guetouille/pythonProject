@@ -1,5 +1,6 @@
 import smtplib
 import logging
+from logging.handlers import RotatingFileHandler
 from email.mime.text import MIMEText
 from pathlib import Path
 import logging_loki
@@ -27,8 +28,8 @@ def send_mail1(message, conn_detail):
     smtp_obj = smtplib.SMTP('smtp.mail.me.com', 587)
     smtp_obj.starttls()
     smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
-    #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com', 'name_3': 'walid.jlidi@club-employes.com','name_4': 'ghazi.bensaid@club-employes.com'}
-    pairs = {'name_1': 'gaetan.perez@icloud.com'}
+    pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com', 'name_3': 'walid.jlidi@club-employes.com','name_4': 'ghazi.bensaid@club-employes.com'}
+    #pairs = {'name_1': 'gaetan.perez@icloud.com'}
     
     try:
         for name in pairs.keys():
@@ -58,15 +59,15 @@ def send_mail_html(message, conn_detail):
     smtp_obj.starttls()
     smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
     #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com','name_3': 'walid.jlidi@club-employes.com', 'name_4': 'ghazi.bensaid@club-employes.com'}
-    maillist ="gaetan.perez@icloud.com;nicolas.lebatteux@gmail.com;walid.jlidi@club-employes.com;ghazi.bensaid@club-employes.com"
+    #maillist ="gaetan.perez@icloud.com;nicolas.lebatteux@gmail.com;walid.jlidi@club-employes.com;ghazi.bensaid@club-employes.com"
+    maillist ="gaetan.perez@icloud.com"
     cclist = ""
     smtp_server='smtp.mail.me.com'
     smtp_port = 587
     gmail = 'gaetan.perez@icloud.com'
     password = 'toat-dcbf-hute-cedb'
     
-    try:
-        
+    try:    
         message = MIMEMultipart('mixed')
         message['From'] = ' <{sender}>'.format(sender = "gaetan.perez@icloud.com")
         message['To'] = maillist
@@ -96,12 +97,11 @@ def send_mail_html(message, conn_detail):
     except Exception as e:
 	        print(str(e))   
     
-        
-
 def logging_info(message):
     mypath=Path.cwd()
     logging.basicConfig(filename=str(mypath) + "/gp_monitoring.log", level=logging.INFO)
     logging.info(message)
+
 def send_log_to_graphana():
     handler = logging_loki.LokiHandler(
         url="https://logs.cockpit.fr-par.scw.cloud/loki/api/v1/push",
@@ -144,12 +144,39 @@ def send_mail2(message, conn_detail):
                                                     msg=msg)
             if send_status != {}:
                 print('There was a problem sending mail to {}.\n{}'.format(name, send_status))
+                logging.basicConfig('There was a problem sending mail to {}.\n{}'.format(name, send_status), level=logging.ERROR)
     finally:
         smtp_obj.quit()
 def logging_info(message):
     mypath=Path.cwd()
     logging.basicConfig(filename=str(mypath) + "/gp_monitoring.log", level=logging.INFO)
+    
     logging.info(message)
+
+def logging_info2(message):
+    mypath=Path.cwd()
+    filename= str(mypath) + "/gp_monitoring.log"
+    rfh = logging.handlers.RotatingFileHandler(
+        filename,
+    mode='a',
+    maxBytes=5*1024*1024,
+    backupCount=2,
+    encoding=None,
+    delay=0
+    )
+
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="%(asctime)s %(name)-25s %(levelname)-8s %(message)s",
+        datefmt="%y-%m-%d %H:%M:%S",
+        handlers=[
+            rfh
+        ]
+    )
+
+    logger = logging.getLogger('main')
+    logger.debug(message)
+
 def send_log_to_graphana():
     handler = logging_loki.LokiHandler(
         url="https://logs.cockpit.fr-par.scw.cloud/loki/api/v1/push",
@@ -277,13 +304,13 @@ def set_timezone(region):
 def get_date_string(date_object):
   return rfc3339.rfc3339(date_object)
 
-def call_api():
+def run_backup_scaleway():
         user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token,region=read_config_flatten("database")
         latz = set_timezone("America/Los_Angeles")
         mydate = datetime.now(latz).replace(year=datetime.now().year + 1)   
         iso_date= mydate.replace(microsecond=0).isoformat()
         iso_date = get_date_string(mydate)
-
+        print ("runnning backup expires at {}".format(iso_date))
         data=json.dumps({"database_name": "{}".format(database),
                         "instance_id": "{}".format(instance_id),
                         "name": "Backup_End_Of_Month",

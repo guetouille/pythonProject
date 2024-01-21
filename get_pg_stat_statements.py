@@ -1,17 +1,25 @@
 import psycopg2
 from psycopg2 import Error
-import smtplib
+import smtplib , datetime, common
 import logging
 from pathlib import Path
 import get_idle_tran
 import pandas as pd
 from IPython.display import HTML
 
+def mng_reset_pg_stat_statements(connection):
+    d = d = datetime.datetime.now()
+    day = d.strftime("%d")
+    if (day == 1):
+        common.logging_info(str(datetime.datetime.now()) + " reset of pg_stat_statements as day {}".format(day))
+        reset_pg_stat_statements(connection)
+    else:
+        common.logging_info(str(datetime.datetime.now()) + "  No reset of pg_stat_statements as day {}".format(day))
+        return
+          
+    
 def reset_pg_stat_statements(connection):
     query = "select pg_stat_statements_reset();"
-    message =""
-    status=""
-    conn_detail=""
     try:
         cursor = connection.cursor()
         conn_detail = connection.get_dsn_parameters()
@@ -22,8 +30,7 @@ def reset_pg_stat_statements(connection):
     except (Exception, Error) as error:
         print("Error while connecting to PostgreSQL in reset_pg_stat_statements", error)
     finally:
-       
-            return message,status,conn_detail
+        return
 
 def get_pg_stat_statements(connection ):
     query = "SELECT  substring(query, 1, 50) AS query,round(total_exec_time::numeric, 2) AS total_time,calls,round(mean_exec_time::numeric, 2) AS mean,round((100 * total_exec_time /sum(total_exec_time::numeric) OVER ())::numeric, 2) AS percentage_cpu FROM    pg_stat_statements where query not like '%insu%' ORDER BY total_time DESC LIMIT 1000;"
