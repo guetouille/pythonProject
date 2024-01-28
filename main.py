@@ -1,4 +1,4 @@
-import sys
+import sys , mysql
 import common, filemng, metrics
 import get_idle_tran
 import get_pg_stat_statements
@@ -28,8 +28,7 @@ if __name__ == '__main__':
             message = get_idle_tran.get_idle_in_tran(connection)
             if (message[1] == "OK"):
                 print (message)
-                common.logging_info(str(datetime.datetime.now()) + message[0])
-                
+                common.logging_info(str(datetime.datetime.now()) + message[0])                
             else:
                 common.logging_info(str(datetime.datetime.now()) + str(message[0]))
                 common.send_mail1(message[0], message[1])
@@ -53,7 +52,7 @@ if __name__ == '__main__':
             common.logging_info(str(datetime.datetime.now()) + " local backup done")
             common.logging_info(str(datetime.datetime.now()) + " purging local backups")
             filemng.purge_older_backups(30)
-            common.logging_info(str(datetime.datetime.now()) + "Calling backup in Scaleway")
+            common.logging_info(str(datetime.datetime.now()) + " Calling backup in Scaleway")
             common.run_backup_scaleway()
         elif opt in ("restore"):
             connection = common.read_config("database")
@@ -67,6 +66,8 @@ if __name__ == '__main__':
             common.logging_info(str(datetime.datetime.now()) + "  running check metrics")
             tab=metrics.load_metrics()
             metrics.mng_metrics(tab)
+        elif opt in ("backup_mysql"):
+            mysql.backup_mysql()
         
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()

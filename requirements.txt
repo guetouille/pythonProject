@@ -10,6 +10,7 @@ executing==1.2.0
 idna==3.4
 ipython==8.15.0
 jedi==0.19.0
+jmespath==1.0.1
 logging==0.4.9.6
 loki==0.5.6
 matplotlib-inline==0.1.6
@@ -21,6 +22,7 @@ prompt-toolkit==3.0.39
 psycopg2==2.9.7
 pure-eval==0.2.2
 Pygments==2.16.1
+PyMySQL==1.1.0
 python-dateutil==2.8.2
 python-logging-loki==0.3.1
 pytz==2023.3.post1

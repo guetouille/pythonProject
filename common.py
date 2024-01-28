@@ -59,8 +59,8 @@ def send_mail_html(message, conn_detail):
     smtp_obj.starttls()
     smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
     #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com','name_3': 'walid.jlidi@club-employes.com', 'name_4': 'ghazi.bensaid@club-employes.com'}
-    #maillist ="gaetan.perez@icloud.com;nicolas.lebatteux@gmail.com;walid.jlidi@club-employes.com;ghazi.bensaid@club-employes.com"
-    maillist ="gaetan.perez@icloud.com"
+    maillist ="gaetan.perez@icloud.com;nicolas.lebatteux@gmail.com;walid.jlidi@club-employes.com;ghazi.bensaid@club-employes.com"
+    #maillist ="gaetan.perez@icloud.com"
     cclist = ""
     smtp_server='smtp.mail.me.com'
     smtp_port = 587
