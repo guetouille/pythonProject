@@ -45,7 +45,7 @@ if __name__ == '__main__':
             common.logging_info(str(datetime.datetime.now()) + "audit table details done")
             message=get_idle_tran.get_db_size(connection,'ce-emp-prd')
          
-        elif opt in ("backup"):
+        elif opt in ("backup_pg"):
             connection = common.read_config("database")
             print (connection)
             message = common.backup_database()
@@ -68,6 +68,7 @@ if __name__ == '__main__':
             metrics.mng_metrics(tab)
         elif opt in ("backup_mysql"):
             mysql.backup_mysql()
+            filemng.purge_older_backups_mysql(10)
         
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()
