@@ -26,7 +26,7 @@ def purge_older_backups_mysql(days_retention):
 
     for filename in os.listdir(backup_path):
         filestamp = os.stat(os.path.join(backup_path, filename)).st_mtime
-        extension = pathlib.Path('yourPath.example').suffix
+        
         seven_days_ago = now - days_retention * 86400
         if filestamp < seven_days_ago:
             if ("db_short" in filename):
@@ -34,3 +34,6 @@ def purge_older_backups_mysql(days_retention):
                  os.remove(filename)
             else:
                 print("not deleting {}".format(filename))
+            
+        else:
+             print("not deleting {}".format(filename))

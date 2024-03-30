@@ -68,7 +68,7 @@ if __name__ == '__main__':
             metrics.mng_metrics(tab)
         elif opt in ("backup_mysql"):
             mysql.backup_mysql()
-            filemng.purge_older_backups_mysql(10)
+            filemng.purge_older_backups_mysql(1)
         
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()
