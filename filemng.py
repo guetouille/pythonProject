@@ -31,7 +31,7 @@ def purge_older_backups_mysql(days_retention):
         if filestamp < seven_days_ago:
             if ("db_short" in filename):
                  print("deleting {}".format(filename))
-                 os.remove(filename)
+                 os.remove(backup_path + "/" + filename)
             else:
                 print("not deleting {}".format(filename))
             
