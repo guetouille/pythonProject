@@ -53,7 +53,7 @@ if __name__ == '__main__':
             common.logging_info(str(datetime.datetime.now()) + " purging local backups")
             filemng.purge_older_backups(30)
             common.logging_info(str(datetime.datetime.now()) + " Calling backup in Scaleway")
-            common.run_backup_scaleway()
+            common.run_backup_scaleway("database")
         elif opt in ("restore"):
             connection = common.read_config("database")
             common.restore_database()
@@ -69,6 +69,9 @@ if __name__ == '__main__':
         elif opt in ("backup_mysql"):
             mysql.backup_mysql()
             filemng.purge_older_backups_mysql(1)
+            common.run_backup_scaleway("mysqldatabase")
+        elif opt in ("gp"):
+            common.run_backup_scaleway("mysqldatabase")
         
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()

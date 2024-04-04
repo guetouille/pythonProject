@@ -17,3 +17,6 @@ INFO:root:2024-01-21 09:46:31.429136Calling backup in Scaleway
 INFO:root:2024-01-21 11:15:55.361367  No reset of pg_stat_statements as day 12
 INFO:root:2024-01-21 11:18:47.579615  No reset of pg_stat_statements as day 21
 INFO:root:2024-02-03 18:10:18.281437  No reset of pg_stat_statements as day 03
+INFO:root:2024-04-04 17:14:10.972311   res
+INFO:root:2024-04-04 17:21:29.011226   res
+INFO:root:2024-04-04 17:28:24.620420   res

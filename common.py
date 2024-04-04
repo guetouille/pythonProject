@@ -7,11 +7,10 @@ import logging_loki
 import configparser
 import psycopg2
 import hashlib
-import time
+import time, datetime
 from time import gmtime, strftime
 import os
 from urllib import request, parse, error
-import os
 import json
 from datetime import datetime,timezone
 from dateutil.relativedelta import relativedelta 
@@ -22,6 +21,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText 
 from email.mime.application import MIMEApplication
 import ssl
+
 
 def send_mail1(message, conn_detail):
     disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection=common.read_config_monitoring('monitoring')
@@ -304,10 +304,10 @@ def set_timezone(region):
 def get_date_string(date_object):
   return rfc3339.rfc3339(date_object)
 
-def run_backup_scaleway():
-        user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token,region=read_config_flatten("database")
+def run_backup_scaleway(config_section):
+        user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token,region=read_config_flatten(config_section)
         latz = set_timezone("America/Los_Angeles")
-        mydate = datetime.now(latz).replace(year=datetime.now().year + 1)   
+        mydate = datetime.now(latz).replace(day=datetime.now().day + 1)   
         iso_date= mydate.replace(microsecond=0).isoformat()
         iso_date = get_date_string(mydate)
         print ("runnning backup expires at {}".format(iso_date))
@@ -325,7 +325,7 @@ def run_backup_scaleway():
         except error.HTTPError as e:
             res=e.read().decode()
             print (res)
-            logging_info(str(datetime.datetime.now()) + "   res")
+            logging_info(str(datetime.now()) + "   res")
         return {
             "body": json.loads(res),
             "headers": {
