@@ -69,7 +69,7 @@ if __name__ == '__main__':
         elif opt in ("backup_mysql"):
             mysql.backup_mysql()
             filemng.purge_older_backups_mysql(1)
-            common.run_backup_scaleway("mysqldatabase")
+            #common.run_backup_scaleway("mysqldatabase")
         elif opt in ("gp"):
             common.run_backup_scaleway("mysqldatabase")
         

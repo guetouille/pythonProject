@@ -303,6 +303,8 @@ def set_timezone(region):
 
 def get_date_string(date_object):
   return rfc3339.rfc3339(date_object)
+def put_s3_file():
+    return
 
 def run_backup_scaleway(config_section):
         user,password,host,port,database,connect_timeout,backup_path,instance_id,url, auth_token,region=read_config_flatten(config_section)

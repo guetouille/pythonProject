@@ -18,7 +18,7 @@ def backup_mysql():
     
     # Execute the mysqldump command
     #command = f"mysqldump −h{host} −u{user} −-password='{password}' -P{port} {database} > {backup_file}"
-    command = f"mysqldump -u {user} --password='{password}' -h {host} -P {port} {database} --ignore-table=ce-prod.ce_login_attempts > /root/gp/backup/'{db_file_name}'"
+    command = f"mysqldump -u {user} --password='{password}' -h {host} -P {port} {database} --ignore-table=ce-prod.ce_login_attempts --ignore-table=ce-prod.search --skip-lock-tables> /root/gp/backup/'{db_file_name}'"
     print (command)
     subprocess.run(command, shell=True)
 
