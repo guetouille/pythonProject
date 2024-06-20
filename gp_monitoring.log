@@ -20,3 +20,44 @@ INFO:root:2024-02-03 18:10:18.281437  No reset of pg_stat_statements as day 03
 INFO:root:2024-04-04 17:14:10.972311   res
 INFO:root:2024-04-04 17:21:29.011226   res
 INFO:root:2024-04-04 17:28:24.620420   res
+INFO:root:2024-06-05 11:33:23.201397audit connection done
+INFO:root:2024-06-05 11:36:48.730033audit connection done
+INFO:root:2024-06-05 11:37:38.108402audit connection done
+INFO:root:2024-06-05 16:23:01.980031audit connection done
+INFO:root:2024-06-05 16:23:44.587723audit connection done
+INFO:root:2024-06-05 16:24:00.780716audit connection done
+INFO:root:2024-06-05 16:26:18.691029audit connection done
+INFO:root:2024-06-05 16:30:28.913801audit connection done
+INFO:root:2024-06-05 16:31:07.015133audit connection done
+INFO:root:2024-06-05 16:37:53.507270audit connection done
+INFO:root:2024-06-05 16:38:16.730818audit connection done
+INFO:root:2024-06-05 16:39:02.762191audit connection done
+INFO:root:2024-06-05 16:42:53.078042audit connection done
+INFO:root:2024-06-05 16:44:39.545794audit connection done
+INFO:root:2024-06-05 16:46:04.219114audit connection done
+INFO:root:2024-06-05 16:46:35.886188audit connection done
+INFO:root:2024-06-05 16:46:49.606763audit connection done
+INFO:root:2024-06-05 16:47:07.805521audit connection done
+INFO:root:2024-06-05 16:47:36.281569audit connection done
+INFO:root:2024-06-05 16:48:07.531707audit connection done
+INFO:root:2024-06-05 16:48:28.004990audit connection done
+INFO:root:2024-06-05 16:49:40.704029audit connection done
+INFO:root:2024-06-05 16:50:02.009378audit connection done
+INFO:root:2024-06-05 16:55:15.541069audit connection done
+INFO:root:2024-06-05 16:55:38.177309audit connection done
+INFO:root:2024-06-05 16:57:12.186526audit connection done
+INFO:root:2024-06-05 16:57:53.845715audit connection done
+INFO:root:2024-06-05 16:58:41.045784audit connection done
+INFO:root:2024-06-06 08:49:30.318297audit connection done for mysql 
+INFO:root:2024-06-06 08:49:33.851602audit connection done for mysql 
+INFO:root:2024-06-06 08:49:54.823284audit connection done for mysql 
+INFO:root:2024-06-06 08:50:01.749038audit connection done for mysql 
+INFO:root:2024-06-06 08:50:05.578167audit connection done for mysql 
+INFO:root:2024-06-06 08:50:29.449268audit connection done for mysql 
+INFO:root:2024-06-06 08:50:32.473748audit connection done for mysql 
+INFO:root:2024-06-06 08:50:35.775731audit connection done for mysql 
+INFO:root:2024-06-06 08:56:12.225616audit connection done for mysql 
+INFO:root:2024-06-06 08:56:26.836399audit connection done for mysql 
+INFO:root:2024-06-06 08:56:38.682816audit connection done for mysql 
+INFO:root:2024-06-06 09:45:08.935347 audit connection done for mysql 
+INFO:root:2024-06-06 09:47:26.785255 audit connection done for mysql 

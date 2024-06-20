@@ -47,6 +47,30 @@ def send_mail1(message, conn_detail):
                 print('There was a problem sending mail to {}.\n{}'.format(name, send_status))
     finally:
         smtp_obj.quit()
+def send_mail3(message, conn_detail):
+    disk_usage_percent,cpu_usage_percent,memory_usage_percent,connection=common.read_config_monitoring('monitoring')
+    smtp_obj = smtplib.SMTP('smtp.mail.me.com', 587)
+    smtp_obj.starttls()
+    smtp_obj.login('gaetan.perez@icloud.com', 'toat-dcbf-hute-cedb')
+    #pairs = {'name_1': 'gaetan.perez@icloud.com', 'name_2': 'nicolas.lebatteux@gmail.com', 'name_3': 'walid.jlidi@club-employes.com','name_4': 'ghazi.bensaid@club-employes.com'}
+    pairs = {'name_1': 'gaetan.perez@icloud.com'}
+    
+    try:
+        for name in pairs.keys():
+
+            msg = ('From: {}\r\nTo: {}\r\n\r\n Subject: SMTP Alert Postgre Server {}\r\r Hi, an alert has been raised for MYSQL Scaleway server {} \r Up tu 15 active connexions since 5 Minutes '.format(smtp_obj.user,
+                                                             pairs.get(name),conn_detail,
+                                                             str(message)))
+
+            print('Sending email to {} at {}...'.format(name, pairs.get(name)))
+
+            send_status = smtp_obj.sendmail(from_addr=smtp_obj.user,
+                                            to_addrs=pairs.get(name),
+                                            msg=msg)
+            if send_status != {}:
+                print('There was a problem sending mail to {}.\n{}'.format(name, send_status))
+    finally:
+        smtp_obj.quit()
 
 def decodepass(text):
     encrypted = hashlib.sha256('1234').hexdigest()

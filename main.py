@@ -1,6 +1,6 @@
 import sys , mysql
 import common, filemng, metrics
-import get_idle_tran
+import get_idle_tran , s3
 import get_pg_stat_statements
 import datetime
 
@@ -37,6 +37,7 @@ if __name__ == '__main__':
             print (connection)
             message = get_idle_tran.get_active_conn(connection)
             common.logging_info(str(datetime.datetime.now()) + "audit connection done")
+          
             
         elif opt in ("table_details"):
             connection = common.read_config("database")
@@ -67,11 +68,23 @@ if __name__ == '__main__':
             tab=metrics.load_metrics()
             metrics.mng_metrics(tab)
         elif opt in ("backup_mysql"):
-            mysql.backup_mysql()
+            db_file=mysql.backup_mysql()
+            
             filemng.purge_older_backups_mysql(1)
             #common.run_backup_scaleway("mysqldatabase")
         elif opt in ("gp"):
-            common.run_backup_scaleway("mysqldatabase")
+            s3.upload_file_to_s3("/root/gp/backup/db_short_202406190638.dmp","dbbackup01","Nico/toto.exe")
+        elif opt in ("check_conn_mysql"):
+            result = mysql.check_process()
+            common.logging_info(str(datetime.datetime.now()) + " audit connection done for mysql ")
+            print ("result is : " + result)
+            if (int(result) > 0):
+                common.send_mail3("51.159.27.98","51.159.27.98")
+                common.logging_info(str(datetime.datetime.now()) + " Alert on connection raised by Mysql Database Server ")
+            
+                
+
+
         
     #get_idle_tran.send_metric_to_graphana()
    # get_idle_tran.send_mail2()
