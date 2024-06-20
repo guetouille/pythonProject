@@ -24,7 +24,4 @@ def purge_older_backups_mysql(days_retention):
             if ("db_short" in filename):
                  print("deleting {}".format(filename))
                  os.remove(backup_path + "/" + filename)
-            else:
-                print("not deleting {}".format(filename))        
-        else:
-             print("not deleting {}".format(filename))
+            

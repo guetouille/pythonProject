@@ -32,7 +32,7 @@ def backup_mysql():
     # Close the database connection
     connection.close()
   
-    return db_file_name
+    return db_file_name + ".gz"
 
 
 def check_process():

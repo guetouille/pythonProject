@@ -71,9 +71,14 @@ if __name__ == '__main__':
             db_file=mysql.backup_mysql()
             
             filemng.purge_older_backups_mysql(1)
+            root = "/root/gp/backup/"
+            temp = root + db_file + ".gz"
+            file = db_file + ".gz"
+            print ("sending to s3 " + db_file)
+            s3.upload_file_to_s3(temp,"dbbackup01",file )           
             #common.run_backup_scaleway("mysqldatabase")
         elif opt in ("gp"):
-            s3.upload_file_to_s3("/root/gp/backup/db_short_202406190638.dmp","dbbackup01","Nico/toto.exe")
+            s3.upload_file_to_s3("/root/gp/backup/db_short_202406200700.dmp.gz","dbbackup01","backup_prod/db_short_202406200700.dmp.gz")
         elif opt in ("check_conn_mysql"):
             result = mysql.check_process()
             common.logging_info(str(datetime.datetime.now()) + " audit connection done for mysql ")

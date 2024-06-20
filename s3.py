@@ -170,7 +170,7 @@ def put_object(config_section):
 # function to upload file to S3 blob storage Scalaway
 def upload_file_to_s3(file_path, bucket_name, object_name):
     # Get the access key and secret key from environment variables
-    aws_access_key_id='SCWN0TDSPNJE8BQA05AW',
+    aws_access_key_id='SCWN0TDSPNJE8BQA05AW'
     aws_secret_access_key='544d8550-24af-4987-b8bc-9e8dbd79eaaa'
     access_key = os.environ.get('AWS_ACCESS_KEY_ID')
     access_key= aws_access_key_id
@@ -190,7 +190,7 @@ def upload_file_to_s3(file_path, bucket_name, object_name):
         s3 = boto3.client('s3', region_name=s3_region, endpoint_url=s3_endpoint, aws_access_key_id=access_key, aws_secret_access_key=secret_key)
         try:
             s3.upload_file(file_path, bucket_name, object_name)
-            print(f"File uploaded successfully to S3 bucket: {bucket_name}")
+            print(f"File {file_path} uploaded successfully to S3 bucket: {bucket_name}")
         except Exception as e:
             print(f"Error uploading file to S3: {e}")
             exit -1;
@@ -199,7 +199,7 @@ def upload_file_to_s3(file_path, bucket_name, object_name):
         exit -2;
 
 if  __name__ == '__main__' :
-    file="/root/gp/backup/db_short_202406190800.dmp"
+    file="/root/gp/backup/toto.dmp"
     bucket='dbbackup01'
     target_name = 'Nico/toto.exe'
     upload_file_to_s3(file,bucket, target_name)
